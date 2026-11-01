@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
+<title>KEN'S SoulBound Knowledge</title>
+<style>
+:root{--bg:#f8fafc;--panel:#fff;--text:#172033;--muted:#64748b;--line:#e2e8f0;--accent:#5b4bdb;--accent-soft:#eeecff;--green:#15803d;--green-bg:#dcfce7;--amber:#a16207;--amber-bg:#fef3c7;--blue:#1d4ed8;--blue-bg:#dbeafe;--shadow:0 8px 28px rgba(15,23,42,.055)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;overflow:auto;background:#fff;border-right:1px solid var(--line);padding:24px 16px}.brand{display:flex;align-items:center;gap:12px;padding:2px 8px 22px}.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#30236f,#7969ef);color:white;font-weight:850;letter-spacing:-1px;box-shadow:0 6px 16px #5b4bdb33}.brand strong{display:block;font-size:14px;line-height:1.25}.brand small{color:var(--muted);font-size:11px}.nav-label{margin:20px 10px 7px;color:#94a3b8;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.nav{display:grid;gap:4px}.nav button{display:flex;gap:10px;align-items:center;text-align:left;border:0;background:transparent;color:#475569;border-radius:9px;padding:9px 11px;font-size:13px}.nav button:hover{background:#f1f5f9}.nav button.active{background:var(--accent-soft);color:#4338ca;font-weight:700}.nav .ico{width:20px;text-align:center;font-size:15px}.side-foot{margin:28px 8px 0;padding-top:15px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}main{min-width:0}.topbar{height:68px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 clamp(18px,4vw,52px);border-bottom:1px solid var(--line);background:#ffffffd9;backdrop-filter:blur(10px);position:sticky;top:0;z-index:5}.crumb{font-size:12px;color:var(--muted)}.crumb b{color:#334155}.search-wrap{position:relative;width:min(340px,52%)}.search-wrap input{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 12px 9px 35px;background:#fff;outline:none;font-size:13px}.search-wrap input:focus{border-color:#a5b4fc;box-shadow:0 0 0 3px #6366f11a}.search-icon{position:absolute;left:12px;top:8px;color:#94a3b8}.content{max-width:1120px;margin:auto;padding:clamp(22px,4vw,48px)}.page{display:none;animation:fade .2s ease}.page.active{display:block}@keyframes fade{from{opacity:.45;transform:translateY(3px)}to{opacity:1;transform:none}}.eyebrow{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px}.hero{padding:clamp(24px,5vw,50px);border:1px solid #e5e7eb;border-radius:22px;background:radial-gradient(ellipse at 90% 0%,#ece9ff 0,transparent 38%),linear-gradient(135deg,#fff,#fbfbff);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-1.8px;margin:13px 0 14px;max-width:650px}.hero p{color:#64748b;max-width:670px;margin:0;font-size:15px}.hero-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:23px}.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;background:#fff;color:#475569;font-size:11px;font-weight:650}.dot{width:6px;height:6px;border-radius:50%;background:#22c55e}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:32px 0 14px}.section-head h2{margin:0;font-size:20px;letter-spacing:-.4px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:18px;min-width:0;box-shadow:0 2px 8px #0f172a04}.card.clickable{cursor:pointer;transition:transform .15s,border-color .15s,box-shadow .15s}.card.clickable:hover{transform:translateY(-2px);border-color:#c7d2fe;box-shadow:var(--shadow)}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.card-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:#f1f5f9;font-size:19px}.card h3{font-size:15px;margin:12px 0 5px}.card p{font-size:12px;color:var(--muted);margin:0}.status{display:inline-flex;align-items:center;border-radius:6px;padding:3px 7px;font-size:10px;font-weight:800;white-space:nowrap}.completed{background:var(--green-bg);color:var(--green)}.progress{background:var(--amber-bg);color:var(--amber)}.planned{background:#e2e8f0;color:#475569}.info-banner{margin-top:18px;border:1px solid #dbeafe;background:#eff6ff;color:#1e40af;border-radius:12px;padding:13px 15px;font-size:12px}.title-row{display:flex;justify-content:space-between;align-items:start;gap:15px;margin-bottom:24px}.title-row h1{font-size:clamp(28px,4vw,38px);letter-spacing:-1px;line-height:1.15;margin:7px 0}.title-row p{color:var(--muted);max-width:700px;margin:0;font-size:14px}.back{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 11px;color:#475569;font-size:12px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px;background:#fff;margin:14px 0 22px}table{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f8fafc;color:#64748b;font-size:10px;text-transform:uppercase;letter-spacing:.7px}tr:last-child td{border-bottom:0}td small{display:block;color:var(--muted);margin-top:3px}.subhead{font-size:17px;margin:25px 0 10px}.prose{max-width:820px}.prose p,.prose li{color:#475569;font-size:14px}.prose ul{padding-left:21px}.prose strong{color:#1e293b}.stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}.stat{padding:15px;border:1px solid var(--line);border-radius:12px;background:#fff}.stat b{display:block;font-size:21px;letter-spacing:-.5px}.stat span{font-size:11px;color:var(--muted)}.race-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.race{padding:16px;border:1px solid var(--line);border-radius:13px;background:#fff}.race h3{margin:0 0 4px;font-size:15px}.race p{margin:0 0 9px;color:var(--muted);font-size:12px}.race .chance{font-size:11px;color:#4338ca;background:var(--accent-soft);border-radius:6px;padding:3px 7px;display:inline-block}.callout{padding:14px 16px;border-left:3px solid #818cf8;background:#f5f3ff;border-radius:0 10px 10px 0;font-size:13px;color:#4338ca;margin:16px 0}.empty{display:none;text-align:center;padding:40px 10px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:22px clamp(18px,4vw,52px);font-size:11px;color:#94a3b8;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.mobile-menu{display:none;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 9px}.search-results{display:none;position:absolute;top:44px;right:0;width:min(380px,85vw);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:6px;max-height:65vh;overflow:auto;z-index:20}.search-results button{width:100%;text-align:left;padding:10px;border:0;border-radius:8px;background:#fff}.search-results button:hover{background:#f8fafc}.search-results b{display:block;font-size:12px}.search-results small{color:var(--muted);font-size:11px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{display:none;position:fixed;z-index:15;width:270px;box-shadow:var(--shadow)}.sidebar.open{display:block}.mobile-menu{display:block}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.topbar{padding:0 18px}.content{padding:22px 18px}.stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.race-grid{grid-template-columns:1fr}.hero{padding:25px 21px;border-radius:16px}.hero h1{letter-spacing:-1px}.topbar{height:60px}.crumb{display:none}.search-wrap{width:100%}.title-row{display:block}.title-row .back{margin-top:14px}.section-head{align-items:start}.stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="logo">SB</div><div><strong>KEN'S SoulBound</strong><small>Knowledge Base</small></div></div>
+  <div class="nav-label">Knowledge</div>
+  <nav class="nav" id="nav">
+    <button class="active" data-page="home"><span class="ico">⌂</span>Overview</button>
+    <button data-page="races"><span class="ico">◈</span>Races & Abilities</button>
+    <button data-page="talents"><span class="ico">✦</span>Talent Tree</button>
+    <button data-page="weapons"><span class="ico">⚔</span>Legendary Weapons</button>
+    <button data-page="gacha"><span class="ico">◇</span>Gacha System</button>
+    <button data-page="contracts"><span class="ico">▤</span>Cursed Contracts</button>
+    <button data-page="armor"><span class="ico">⬡</span>Armor & Bosses</button>
+    <button data-page="status"><span class="ico">▣</span>Status Book & Money</button>
+    <button data-page="combat"><span class="ico">⚡</span>Combat & Death</button>
+    <button data-page="about"><span class="ico">ⓘ</span>About & Compatibility</button>
+  </nav>
+  <div class="side-foot">Created by <b>Kenzie Studios</b><br>Unofficial player knowledge reference.</div>
+</aside>
+<main>
+  <header class="topbar">
+    <button class="mobile-menu" id="menuBtn" aria-label="Open navigation">☰</button>
+    <div class="crumb">KEN'S SoulBound Knowledge <span> / </span> <b id="crumbPage">Overview</b></div>
+    <div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search knowledge..." autocomplete="off" aria-label="Search knowledge"><div class="search-results" id="searchResults"></div></div>
+  </header>
+  <div class="content">
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="eyebrow"><span class="dot"></span> Minecraft Bedrock RPG Addon</div>
+        <h1>KEN'S SoulBound<br><span style="color:#5b4bdb">Knowledge Base</span></h1>
+        <p>Explore races, abilities, legendary weapons, quests, talents, and the progression systems of KEN'S SoulBound — a fantasy RPG addon created by Kenzie Studios.</p>
+        <div class="hero-meta"><span class="pill">⚒ Bedrock Edition</span><span class="pill">Version range: 1.25.x–1.26.x*</span><span class="pill">✦ Fantasy RPG</span></div>
+      </div>
+      <div class="section-head"><div><h2>Explore the Knowledge Base</h2><p>Choose a topic to read its documented details.</p></div></div>
+      <div class="grid">
+        <article class="card clickable" data-open="races"><div class="card-top"><div class="card-icon">◈</div></div><h3>Races & Abilities</h3><p>Eight races, roll chances, passive traits, and active skills.</p></article>
+        <article class="card clickable" data-open="talents"><div class="card-top"><div class="card-icon">✦</div></div><h3>Talent Tree</h3><p>Build character strength through Berserker, Guardian, and Mystic.</p></article>
+        <article class="card clickable" data-open="weapons"><div class="card-top"><div class="card-icon">⚔</div></div><h3>Legendary Weapons</h3><p>Weapon stats, skills, cooldowns, and gacha chances.</p></article>
+        <article class="card clickable" data-open="contracts"><div class="card-top"><div class="card-icon">▤</div></div><h3>Cursed Contracts</h3><p>Mob-hunt contracts and Legendary Weapon Key rewards.</p></article>
+        <article class="card clickable" data-open="armor"><div class="card-top"><div class="card-icon">⬡</div></div><h3>Armor & Bosses</h3><p>Documented armor, crafting direction, and boss status.</p></article>
+        <article class="card clickable" data-open="status"><div class="card-top"><div class="card-icon">▣</div></div><h3>Progression & Status</h3><p>Status Book, SoulBound Money, death, and respawning.</p></article>
+      </div>
+      <div class="section-head"><div><h2>At a glance</h2><p>Key facts currently documented.</p></div></div>
+      <div class="stat-grid"><div class="stat"><b>8</b><span>Races</span></div><div class="stat"><b>5</b><span>Legendary weapons</span></div><div class="stat"><b>3</b><span>Talent branches</span></div><div class="stat"><b>2</b><span>Confirmed contract quests</span></div></div>
+      <div class="info-banner">*Version range is based on the creator's report and has not been independently tested across every version. Feature status labels distinguish implemented and unfinished content.</div>
+    </section>
+
+    <section class="page" id="page-races">
+      <div class="title-row"><div><div class="eyebrow">Character system</div><h1>Races & Abilities</h1><p>Race is obtained through the first-join gacha. Each race has a distinct identity, passive trait, and in some cases an active ability.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="callout">Race gacha: first roll is free. Players can reroll up to 5 total rolls; the last result is automatically finalized at the limit. Race is saved using <code>soulbound:race</code>.</div>
+      <h2 class="subhead">Race roll chances</h2>
+      <div class="table-wrap"><table><thead><tr><th>Race</th><th>Weight</th><th>Chance</th><th>Active ability</th></tr></thead><tbody>
+      <tr><td>Human</td><td>40</td><td>31.75%</td><td>None</td></tr><tr><td>Dwarf</td><td>25</td><td>19.84%</td><td>3×3×3 mining</td></tr><tr><td>Elf</td><td>25</td><td>19.84%</td><td>Tree chopping</td></tr><tr><td>Beastkin</td><td>15</td><td>11.90%</td><td>Instinct detection</td></tr><tr><td>Revenant</td><td>8</td><td>6.35%</td><td>Not documented</td></tr><tr><td>Demonkin</td><td>5</td><td>3.97%</td><td>Abyssal Rupture</td></tr><tr><td>Celestial</td><td>4</td><td>3.17%</td><td>Celestial Luck / Celestial Curse</td></tr><tr><td>Dragonkin</td><td>4</td><td>3.17%</td><td>Dragonkin Grimoire fire breath</td></tr>
+      </tbody></table></div>
+      <h2 class="subhead">Passive abilities</h2>
+      <div class="race-grid">
+        <div class="race"><h3>Human — Adaptability</h3><p>Gain +1 XP when directly killing a non-player entity.</p><span class="chance">Passive</span></div>
+        <div class="race"><h3>Dwarf — Iron Spirit</h3><p>Resistance I at or below 50% health. Also mines nearby blocks in a 3×3×3 cube when mining stone with a pickaxe.</p><span class="chance">Passive + utility</span></div>
+        <div class="race"><h3>Elf — Forest Grace</h3><p>Speed I refreshed automatically. Chopping a tree chops its full trunk.</p><span class="chance">Passive + utility</span></div>
+        <div class="race"><h3>Beastkin — Wild Instinct</h3><p>Detects hostile mobs within 5 blocks. Direct kills grant Speed I for 5 seconds; 15-second cooldown.</p><span class="chance">Passive + detection</span></div>
+        <div class="race"><h3>Demonkin — Demonic Blood</h3><p>Strength I at or below 50% health.</p><span class="chance">Passive</span></div>
+        <div class="race"><h3>Revenant — Dark Resilience</h3><p>Direct kills grant Regeneration I for 4 seconds; 25-second cooldown.</p><span class="chance">Passive</span></div>
+        <div class="race"><h3>Celestial — Divine Origin</h3><p>Regeneration I at or below 50% health.</p><span class="chance">Passive</span></div>
+        <div class="race"><h3>Dragonkin — Dragon Soul</h3><p>Fire Resistance I refreshed automatically. Direct kills grant Strength I for 6 seconds; 30-second cooldown.</p><span class="chance">Passive</span></div>
+      </div>
+      <h2 class="subhead">Active abilities</h2>
+      <div class="table-wrap"><table><thead><tr><th>Race</th><th>Ability / item</th><th>Effect</th><th>Cooldown / status</th></tr></thead><tbody>
+      <tr><td>Dragonkin</td><td>Grimoire of Dragonkin</td><td>Right-click/interact breathes fire forward; burns entities up to about 9 blocks away, width about 3 blocks.</td><td>Estimated 10–20 sec; not confirmed</td></tr>
+      <tr><td>Celestial</td><td>Celestial Luck</td><td>Regeneration II, Strength I, Resistance I, Speed I for 15 sec; particle <code>sb:celestial_luck</code>.</td><td>30 sec</td></tr>
+      <tr><td>Celestial</td><td>Celestial Curse</td><td>Select an online player; Slowness II and Weakness I for 8 sec; particle <code>sb:celestial_cursed</code>.</td><td>30 sec</td></tr>
+      <tr><td>Demonkin</td><td>Abyssal Rupture</td><td>Explosion effect around 4–6 block radius, damages entities without destroying blocks.</td><td>Not confirmed</td></tr>
+      <tr><td>Human</td><td>None</td><td>No active ability.</td><td>—</td></tr>
+      <tr><td>Revenant</td><td>Not documented</td><td>Active ability details not yet confirmed.</td><td>Unknown</td></tr>
+      </tbody></table></div>
+      <p style="font-size:12px;color:#64748b">Passive effects are checked periodically by the addon. Exact persistence of some active-skill cooldowns after reload is not confirmed.</p>
+    </section>
+
+    <section class="page" id="page-talents">
+      <div class="title-row"><div><div class="eyebrow">Character progression</div><h1>Talent Tree</h1><p>Open the Talent Tree through the Status Book. Talent Points are gained from leveling up, while talent upgrades consume player experience levels.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="stat-grid"><div class="stat"><b>3</b><span>Starting Talent Points</span></div><div class="stat"><b>+1</b><span>Talent Point per level-up</span></div><div class="stat"><b>5</b><span>Max rank: basic talents</span></div><div class="stat"><b>3</b><span>Max rank: advanced talents</span></div></div>
+      <div class="callout">Talent Points are not directly consumed by upgrades. Upgrading costs XP/experience levels. Talent reset is not available. Advanced talents require prerequisite ranks.</div>
+      <h2 class="subhead">Berserker — Offense</h2><div class="table-wrap"><table><thead><tr><th>Talent</th><th>Effect</th><th>Requirement</th><th>Max rank / cost</th></tr></thead><tbody>
+      <tr><td>Power Strike</td><td>Strength</td><td>None recorded</td><td>Rank 5; next-rank costs 1–5 XP levels</td></tr><tr><td>Battle Fury</td><td>Speed</td><td>None recorded</td><td>Rank 5; next-rank costs 1–5 XP levels</td></tr><tr><td>Bloodlust</td><td>Strength + Speed</td><td>Power Strike 2 + Battle Fury 2</td><td>Rank 3; base cost 2 × (next rank)</td></tr><tr><td>Execution</td><td>Combat power</td><td>Bloodlust 3</td><td>Rank 3; base cost 4 × (next rank)</td></tr></tbody></table></div>
+      <h2 class="subhead">Guardian — Defense & survival</h2><div class="table-wrap"><table><thead><tr><th>Talent</th><th>Effect</th><th>Requirement</th><th>Max rank / cost</th></tr></thead><tbody>
+      <tr><td>Vitality</td><td>Health Boost</td><td>None recorded</td><td>Rank 5; next-rank costs 1–5 XP levels</td></tr><tr><td>Iron Resolve</td><td>Resistance</td><td>None recorded</td><td>Rank 5; next-rank costs 1–5 XP levels</td></tr><tr><td>Fortress</td><td>Resistance</td><td>Vitality 2 + Iron Resolve 2</td><td>Rank 3; base cost 2 × (next rank)</td></tr><tr><td>Aegis</td><td>Resistance + Health Boost</td><td>Fortress 3</td><td>Rank 3; base cost 4 × (next rank)</td></tr></tbody></table></div>
+      <h2 class="subhead">Mystic — Mobility</h2><div class="table-wrap"><table><thead><tr><th>Talent</th><th>Effect</th><th>Requirement</th><th>Max rank / cost</th></tr></thead><tbody>
+      <tr><td>Swiftstep</td><td>Speed</td><td>None recorded</td><td>Rank 5; next-rank costs 1–5 XP levels</td></tr><tr><td>Soulflow</td><td>Jump Boost</td><td>None recorded</td><td>Rank 5; next-rank costs 1–5 XP levels</td></tr><tr><td>Arcane Step</td><td>Speed + Jump Boost</td><td>Swiftstep 2 + Soulflow 2</td><td>Rank 3; base cost 2 × (next rank)</td></tr><tr><td>Ascension</td><td>Higher Speed + Jump Boost</td><td>Arcane Step 3</td><td>Rank 3; base cost 4 × (next rank)</td></tr></tbody></table></div>
+      <p style="font-size:12px;color:#64748b">Advanced talent costs are documented as base cost × (current rank + 1): base 2 costs 2, 4, 6; base 4 costs 4, 8, 12 experience levels.</p>
+    </section>
+
+    <section class="page" id="page-weapons">
+      <div class="title-row"><div><div class="eyebrow">Equipment collection</div><h1>Legendary Weapons</h1><p>All five documented weapons share a base damage of 21 and durability of 9,999. Skill details are listed as currently documented.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Weapon</th><th>Gacha chance</th><th>Damage</th><th>Durability</th><th>Cooldown</th></tr></thead><tbody>
+      <tr><td>Legendary DoomSword<small><code>sb:legendary_doomsword</code></small></td><td>50%</td><td>21</td><td>9,999</td><td>5 sec</td></tr>
+      <tr><td>Legendary War Axe<small><code>sb:legendary_waraxe</code></small></td><td>5%</td><td>21</td><td>9,999</td><td>10 sec</td></tr>
+      <tr><td>Legendary Scythe<small><code>sb:legendary_scythe</code></small></td><td>8%</td><td>21</td><td>9,999</td><td>5 sec</td></tr>
+      <tr><td>Legendary Imperion<small><code>sb:legendary_imperion</code></small></td><td>10%</td><td>21</td><td>9,999</td><td>3 sec</td></tr>
+      <tr><td>Legendary Greatsword<small><code>sb:legendary_greatsword</code></small></td><td>27%</td><td>21</td><td>9,999</td><td>5 sec</td></tr>
+      </tbody></table></div>
+      <h2 class="subhead">Weapon skill details</h2>
+      <div class="grid">
+        <article class="card"><div class="card-top"><div class="card-icon">☄</div><span class="pill">5 sec</span></div><h3>Legendary DoomSword</h3><p>Right-click/interact launches a forward energy slash with particle visuals. Approximate range: 4 blocks. Additional damage details not confirmed.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">🔥</div><span class="pill">10 sec</span></div><h3>Legendary War Axe</h3><p>Summons a large axe from above. Impact creates an area of fire; entities within a 5-block radius burn for 5 seconds. Attacks create a large fiery slash particle.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">〰</div><span class="pill">5 sec</span></div><h3>Legendary Scythe</h3><p>Dashes forward around 10 blocks with particles. Mobility skill only; does not damage entities passed through and does not grant invisibility.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">◌</div><span class="pill">3 sec</span></div><h3>Legendary Imperion</h3><p>Dashes around 5 blocks and makes the user invisible during the dash.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">⚔</div><span class="pill">5 sec</span></div><h3>Legendary Greatsword</h3><p>Right-click performs a forward slash that damages entities without burning them. Crouch + right-click performs a fire-effect ground slam area attack.</p></article>
+      </div>
+      <div class="callout">Skill activation is right-click/interact unless otherwise stated. Damage 21 and durability 9,999 are creator-provided stats, not independently tested values.</div>
+    </section>
+
+    <section class="page" id="page-gacha">
+      <div class="title-row"><div><div class="eyebrow">Loot & rewards</div><h1>Legendary Weapon Gacha</h1><p>Use a Legendary Weapon Key and SoulBound Money to roll for a random legendary weapon.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="stat-grid"><div class="stat"><b>1 Key</b><span>Per roll</span></div><div class="stat"><b>300</b><span>SoulBound Money per roll</span></div><div class="stat"><b>100%</b><span>Total drop chance</span></div><div class="stat"><b>5</b><span>Weapon outcomes</span></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Reward</th><th>Identifier</th><th>Chance</th></tr></thead><tbody>
+      <tr><td>Legendary War Axe</td><td><code>sb:legendary_waraxe</code></td><td>5%</td></tr><tr><td>Legendary Scythe</td><td><code>sb:legendary_scythe</code></td><td>8%</td></tr><tr><td>Legendary Imperion</td><td><code>sb:legendary_imperion</code></td><td>10%</td></tr><tr><td>Legendary Greatsword</td><td><code>sb:legendary_greatsword</code></td><td>27%</td></tr><tr><td>Legendary DoomSword</td><td><code>sb:legendary_doomsword</code></td><td>50%</td></tr></tbody></table></div>
+      <h2 class="subhead">Gacha rules</h2><ul class="prose"><li>Each roll costs 1 <code>sb:gacha_key</code> and 300 SoulBound Money.</li><li>Duplicate weapon drops are allowed.</li><li>The reward is delivered directly into the player's inventory.</li><li>At least one empty inventory slot is required.</li><li>The script attempts to refund the cost if the transaction or item delivery fails.</li><li>A pity system is planned, but has not been implemented yet.</li></ul>
+      <div class="callout">The key is obtained as a reward for completing a Cursed Contract.</div>
+    </section>
+
+    <section class="page" id="page-contracts">
+      <div class="title-row"><div><div class="eyebrow">Quest system</div><h1>Cursed Contracts</h1><p>Accept a random mob-hunt quest through the Cursed Contract Book. Complete the target to earn a Legendary Weapon Key.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="stat-grid"><div class="stat"><b>1×</b><span>Legendary Weapon Key reward</span></div><div class="stat"><b>Auto</b><span>Completion detection</span></div><div class="stat"><b>Random</b><span>Quest selection</span></div><div class="stat"><b>1 active</b><span>Contract at a time</span></div></div>
+      <h2 class="subhead">Confirmed quest list</h2>
+      <div class="grid">
+        <article class="card"><div class="card-top"><div class="card-icon">🕷</div><span class="status completed">Confirmed</span></div><h3>Spider Hunt</h3><p>Defeat 45 spiders.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">☠</div><span class="status completed">Confirmed</span></div><h3>Zombie Hunt</h3><p>Defeat 50 zombies.</p></article>
+      </div>
+      <h2 class="subhead">Contract rules</h2><ul class="prose"><li>Quest is selected randomly from the configured quest list.</li><li>Progress is detected automatically by the script when the target count is reached.</li><li>The player must finish the current contract before accepting another.</li><li>Contracts cannot currently be cancelled or replaced while active.</li><li>Target quantities vary by quest; the intended design is balanced difficulty.</li></ul>
+      <div class="info-banner">Only the two quests above are confirmed in this knowledge base. No additional quests are assumed from examples.</div>
+    </section>
+
+    <section class="page" id="page-armor">
+      <div class="title-row"><div><div class="eyebrow">Equipment & encounters</div><h1>Armor & Bosses</h1><p>Custom armor and boss encounters are part of the addon progression. Content status is shown explicitly.</p></div><button class="back" data-home>← Overview</button></div>
+      <h2 class="subhead">Armor</h2>
+      <div class="grid">
+        <article class="card"><div class="card-top"><div class="card-icon">✧</div><span class="status completed">Armor made</span></div><h3>Celestial Armor</h3><p>Provides flight and defense. Uses materials including Celestial Fragment dropped by Celestial Queen. Exact recipe and defense values have not been confirmed.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">🔥</div><span class="status progress">Crafting incomplete</span></div><h3>Dragonkin Armor</h3><p>Defense: 21. Intended smithing recipe: Draconic Template + Netherite Armor + Dragon Scale. Wearing the chestplate provides a high upward jump / flight-like movement.</p><p style="margin-top:9px">Dragon Scale: 25% chance from mob kills while using Draconic Sword, according to the current design notes.</p></article>
+      </div>
+      <h2 class="subhead">Boss encounters</h2>
+      <div class="grid">
+        <article class="card"><div class="card-top"><div class="card-icon">👑</div><span class="status completed">Implemented</span></div><h3>Celestial Queen</h3><p>500 HP. Spawns naturally through the addon's biome system. Throws a wind attack/projectile that creates a burst on impact with a block or player. Drops Celestial Fragment. Difficulty: medium.</p></article>
+        <article class="card"><div class="card-top"><div class="card-icon">🐉</div><span class="status progress">Not yet made</span></div><h3>Dragonkin Boss</h3><p>Listed as an unfinished boss associated with the Dragonkin content. No additional boss encounters are currently planned.</p></article>
+      </div>
+      <div class="callout">The Dragonkin armor has been made, but its crafting and boss content are not yet complete. No other bosses are planned at this time.</div>
+    </section>
+
+    <section class="page" id="page-status">
+      <div class="title-row"><div><div class="eyebrow">Player information</div><h1>Status Book & Money</h1><p>The Status Book is the central interface for player information and access to the Talent Tree.</p></div><button class="back" data-home>← Overview</button></div>
+      <h2 class="subhead">Status Book</h2><div class="table-wrap"><table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody>
+      <tr><td>Player Level</td><td>Current player level</td></tr><tr><td>Health</td><td>Current health information</td></tr><tr><td>Estimated Damage</td><td>Estimated damage value</td></tr><tr><td>Estimated Defense</td><td>Estimated defense value</td></tr><tr><td>Mob Kill Count</td><td>Number of mobs killed</td></tr><tr><td>SoulBound Money</td><td>Current currency balance</td></tr><tr><td>Talent Points & talent levels</td><td>Available points and talent progression</td></tr><tr><td>Race</td><td>Current player race</td></tr></tbody></table></div>
+      <ul class="prose"><li>Item ID: <code>sb:status_book</code>.</li><li>Given automatically when the player first joins the world.</li><li>Hold the item and use right-click/interact to open it.</li><li>If lost, it is automatically given again.</li><li>Estimated Damage and Estimated Defense are estimates, not guaranteed exact values.</li></ul>
+      <h2 class="subhead">SoulBound Money</h2><div class="stat-grid"><div class="stat"><b>1,000</b><span>Starting balance</span></div><div class="stat"><b>Mobs</b><span>Income source</span></div><div class="stat"><b>Bosses</b><span>Also reward money</span></div><div class="stat"><b>Saved</b><span>Persists after death</span></div></div>
+      <ul class="prose"><li>Dynamic property: <code>soulbound:money</code>.</li><li>Earned by killing mobs and bosses; the exact amount per kill has not been confirmed.</li><li>Killing mobs and bosses is the only documented income source.</li><li>Money is not lost on death.</li></ul>
+    </section>
+
+    <section class="page" id="page-combat">
+      <div class="title-row"><div><div class="eyebrow">Gameplay rules</div><h1>Combat & Death</h1><p>Combat combines Minecraft item attributes with scripted mechanics. PvP using addon weapons is possible.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="grid">
+        <article class="card"><div class="card-icon">⚔</div><h3>Damage method</h3><p>Combination of Minecraft item damage attributes and addon scripts.</p></article>
+        <article class="card"><div class="card-icon">✦</div><h3>Critical hits</h3><p>Critical hits exist. Exact chance and bonus damage are not yet documented.</p></article>
+        <article class="card"><div class="card-icon">♟</div><h3>PvP</h3><p>Players can attack each other using addon weapons.</p></article>
+      </div>
+      <h2 class="subhead">Death & respawn rules</h2>
+      <div class="table-wrap"><table><thead><tr><th>System</th><th>Behavior</th><th>Status</th></tr></thead><tbody>
+      <tr><td>XP / Player Level</td><td>Decreases or is lost on death. Exact amount and conditions are unspecified.</td><td><span class="status completed">Reported</span></td></tr>
+      <tr><td>Items</td><td>Drop according to normal Minecraft rules.</td><td><span class="status completed">Reported</span></td></tr>
+      <tr><td>SoulBound Money</td><td>Remains saved after death.</td><td><span class="status completed">Reported</span></td></tr>
+      <tr><td>Respawn</td><td>Uses normal Minecraft respawn behavior.</td><td><span class="status completed">Reported</span></td></tr></tbody></table></div>
+    </section>
+
+    <section class="page" id="page-about">
+      <div class="title-row"><div><div class="eyebrow">Project information</div><h1>About KEN'S SoulBound</h1><p>A fantasy RPG addon focused on race-based playstyles, character progression, quests, and legendary equipment.</p></div><button class="back" data-home>← Overview</button></div>
+      <div class="hero" style="padding:30px"><div class="eyebrow">Official description</div><h2 style="font-size:25px;letter-spacing:-.6px;margin:12px 0">Build your path. Awaken your soul.</h2><p>KEN'S SoulBound is a fantasy RPG addon for Minecraft Bedrock Edition that introduces a progression system built around races, powerful abilities, legendary weapons, and challenging quests. Discover eight unique races, develop your character through the Talent Tree, collect legendary weapons through the gacha, complete Cursed Contracts, earn SoulBound Money by defeating mobs and bosses, and explore custom armor and PvP combat. Every race and weapon brings a different way to play.</p></div>
+      <h2 class="subhead">Project details</h2><div class="table-wrap"><table><tbody><tr><th>Addon name</th><td>KEN'S SoulBound</td></tr><tr><th>Creator</th><td>Kenzie Studios</td></tr><tr><th>Knowledge base</th><td>KEN'S SoulBound Knowledge</td></tr><tr><th>Platform</th><td>Minecraft Bedrock Edition</td></tr><tr><th>Reported compatibility</th><td>1.25.x – 1.26.x</td></tr><tr><th>Development tool</th><td>MAM Addon Maker</td></tr></tbody></table></div>
+      <h2 class="subhead">Feature status policy</h2><div class="grid"><article class="card"><span class="status completed">Completed</span><h3>Implemented</h3><p>Reported as created and working.</p></article><article class="card"><span class="status progress">In Progress</span><h3>In progress</h3><p>Partially made or still being developed.</p></article><article class="card"><span class="status planned">Planned</span><h3>Planned</h3><p>Intended for the future but not yet implemented.</p></article></div>
+      <div class="info-banner">Compatibility is based on the creator's stated target range, not independent testing. This knowledge base documents information provided by the creator; values marked as estimated or unknown should not be treated as verified game data.</div>
+    </section>
+    <div class="empty" id="emptyState">No matching topics found. Try another search term.</div>
+  </div>
+  <footer><span>© Kenzie Studios · KEN'S SoulBound Knowledge</span><span>Community reference · Some values remain unverified</span></footer>
+</main>
+</div>
+<script>
+const pageNames={home:"Overview",races:"Races & Abilities",talents:"Talent Tree",weapons:"Legendary Weapons",gacha:"Gacha System",contracts:"Cursed Contracts",armor:"Armor & Bosses",status:"Status Book & Money",combat:"Combat & Death",about:"About & Compatibility"};
+function showPage(name){if(!pageNames[name])name="home";document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+name));document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===name));document.getElementById("crumbPage").textContent=pageNames[name];document.getElementById("sidebar").classList.remove("open");document.getElementById("emptyState").style.display="none";window.scrollTo({top:0,behavior:"smooth"});}
+document.querySelectorAll("#nav button").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+document.querySelectorAll("[data-open]").forEach(c=>c.addEventListener("click",()=>showPage(c.dataset.open)));
+document.querySelectorAll("[data-home]").forEach(b=>b.addEventListener("click",()=>showPage("home")));
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("sidebar").classList.toggle("open"));
+const search=document.getElementById("search"),results=document.getElementById("searchResults");
+const searchIndex=[
+["Races & Abilities","races","Eight races, roll chances, passive traits, active skills, Dragonkin, Celestial, Demonkin, Revenant, Human, Dwarf, Elf, Beastkin"],
+["Talent Tree","talents","Berserker Guardian Mystic Power Strike Battle Fury Bloodlust Execution Vitality Iron Resolve Fortress Aegis Swiftstep Soulflow Arcane Step Ascension"],
+["Legendary Weapons","weapons","DoomSword War Axe Scythe Imperion Greatsword damage durability cooldown skill"],
+["Gacha System","gacha","key 300 money 5% 8% 10% 27% 50% legendary weapon chance pity"],
+["Cursed Contracts","contracts","spider 45 zombie 50 quest random key reward"],
+["Armor & Bosses","armor","Celestial Armor Dragonkin Armor Celestial Queen Dragonkin Boss fragment"],
+["Status Book & Money","status","status book level health estimated damage defense mob kill count money talent points race"],
+["Combat & Death","combat","critical hit pvp death XP level drop items respawn"],
+["About & Compatibility","about","creator Kenzie Studios Minecraft Bedrock 1.25 1.26"]
+];
+search.addEventListener("input",()=>{const q=search.value.trim().toLowerCase();results.innerHTML="";if(!q){results.style.display="none";return}const matches=searchIndex.filter(x=>(x[0]+" "+x[2]).toLowerCase().includes(q));matches.forEach(x=>{const b=document.createElement("button");b.innerHTML="<b>"+x[0]+"</b><small>"+x[2].split(" ").slice(0,10).join(" ")+"…</small>";b.addEventListener("click",()=>{showPage(x[1]);results.style.display="none";search.value=""});results.appendChild(b)});if(!matches.length){const d=document.createElement("button");d.textContent="No matching topics";d.disabled=true;results.appendChild(d)}results.style.display="block"});
+document.addEventListener("click",e=>{if(!e.target.closest(".search-wrap"))results.style.display="none";});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){results.style.display="none";document.getElementById("sidebar").classList.remove("open")}});
+</script>
+</body>
+</html>
